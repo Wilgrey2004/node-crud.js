@@ -4,9 +4,11 @@ const express = require("express");
 
 const app = express();
 
-app.get("/", (req, res) => {
-  res.send("Hello World!");
-});
+const mainRouter = require("./src/routes/productos.router.js");
+
+app.use(mainRouter);
+
+app.use(require("./src/routes/productos.router.js"));
 
 const port = process.env.PORT || 3001;
 
