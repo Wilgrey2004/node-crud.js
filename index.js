@@ -4,7 +4,9 @@ const express = require("express");
 
 const app = express();
 
-const mainRouter = require("./src/routes/productos.router.js");
+const mainRouter = require("./src/routes/main.router.js");
+
+app.use(express.static("public"));
 
 app.use(mainRouter);
 

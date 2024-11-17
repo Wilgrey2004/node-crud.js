@@ -1,0 +1,19 @@
+.container {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  width: 25%;
+  height: 50%;
+}
+
+h1 {
+  background-color: rgb(78, 92, 87);
+  font-size: 40px;
+  padding: 4px;
+  text-align: center;
+  color: cadetblue;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px 2px rgb(53, 52, 52);
+}
