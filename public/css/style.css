@@ -17,3 +17,9 @@ h1 {
   border-radius: 5px;
   box-shadow: 2px 2px 2px 2px rgb(53, 52, 52);
 }
+
+.productos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+}

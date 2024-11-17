@@ -5,10 +5,12 @@ const index = (req, res) => {
   console.log(query);
   fetch("https://fakestoreapi.com/products?" + query)
     .then((res) => res.json())
-    .then((json) => res.send(json));
+    .then((json) => {
+      res.render("Productos", {json});
+    });
 };
 
-const finid = (req, res) => {
+const show = (req, res) => {
   fetch("https://fakestoreapi.com/products/" + req.params.id)
     .then((res) => res.json())
     .then((json) => res.json(json));
@@ -16,5 +18,5 @@ const finid = (req, res) => {
 
 module.exports = {
   index: index,
-  finid: finid,
+  show: show,
 };
