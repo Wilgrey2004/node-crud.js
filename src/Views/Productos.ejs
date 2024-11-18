@@ -1,37 +1,18 @@
-<!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Productos</title>
-    <link rel="stylesheet" href="./css/style.css" />
-  </head>
-  <body>
-    <head>
-      <nav>
-        <a href="/">Inicio</a>
-        <a href="/productos">Productos</a>
-      </nav>
-    </head>
-    <main>
-      <div class="container">
-        <h1 class="title">Productos</h1>
-      </div>
-      <section class="productos">
-        <% json.forEach(productos => {%>
-        <article>
-          <h2><%= productos.title %></h2>
-          <p><%= productos.description %></p>
-        </article>
-        <%}) %>
-      </section>
-    </main>
-    <footer>
-      <small>Copyright &copy; 2024</small>
-    </footer>
+<main>
+  <div class="container">
     <h1 class="title">Productos</h1>
+  </div>
+  <section class="productos">
+    <% json.forEach(productos => {%>
+    <article>
+      <h2><%= productos.title %></h2>
+      <p><%= productos.description %></p>
+    </article>
+    <%}) %>
+  </section>
+</main>
 
-    <!-- <table>
+<!-- <table>
         <thead>
             <tr>
                 <th>Titulo</th>
@@ -49,5 +30,3 @@
             
         </tbody>
     </table> -->
-  </body>
-</html>

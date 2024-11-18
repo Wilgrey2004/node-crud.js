@@ -4,6 +4,8 @@ const path = require("path");
 
 const express = require("express");
 
+const layout = require("express-ejs-layouts");
+
 const app = express();
 
 const mainRouter = require("./src/routes/main.router.js");
@@ -15,6 +17,9 @@ app.use(express.static(path.join(__dirname, "public")));
 app.set("view engine", "ejs");
 
 app.set("views", path.join(__dirname, "src/Views"));
+
+app.use(layout);
+app.set("layout", "layouts/layout");
 
 app.use(mainRouter);
 
