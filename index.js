@@ -8,6 +8,8 @@ const layout = require("express-ejs-layouts");
 
 const app = express();
 
+app.use(express.urlencoded({ extended: false }));
+
 const mainRouter = require("./src/routes/main.router.js");
 
 app.use(express.static(path.join(__dirname, "public")));
@@ -24,6 +26,8 @@ app.set("layout", "layouts/layout");
 app.use(mainRouter);
 
 app.use(require("./src/routes/productos.router.js"));
+
+app.use(require("./src/routes/contacto.route.js"));
 
 const port = process.env.PORT || 3001;
 
